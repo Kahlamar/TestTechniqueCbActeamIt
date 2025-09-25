@@ -69,7 +69,7 @@
 
 <script>
 import trains from "@/assets/trains.json" with { type: "json" };
-import { TrieParHeure } from "@/assets/utils.js";
+import { TrieParHeure } from "@/utils/utils.js";
 
 const trains_departs_tries = TrieParHeure(trains.departs);
 const trains_arrivees_tries = TrieParHeure(trains.arrivees);
