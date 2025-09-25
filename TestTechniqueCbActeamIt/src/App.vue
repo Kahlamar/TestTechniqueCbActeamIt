@@ -15,7 +15,7 @@
           </thead>
           <tbody>
             <tr
-              v-for="train in trains.arrivees"
+              v-for="train in trains_arrivees_tries"
               :key="train.numero"
               :class="{ retard: train.retard > 0 }"
             >
@@ -46,7 +46,7 @@
           </thead>
           <tbody>
             <tr
-              v-for="train in trains.departs"
+              v-for="train in trains_departs_tries"
               :key="train.numero"
               :class="{ retard: train.retard > 0 }"
             >
@@ -68,13 +68,18 @@
 </template>
 
 <script>
-import trains from "@/assets/trains.json";
+import trains from "@/assets/trains.json" with { type: "json" };
+import { TrieParHeure } from "@/assets/utils.js";
+
+const trains_departs_tries = TrieParHeure(trains.departs);
+const trains_arrivees_tries = TrieParHeure(trains.arrivees);
 
 export default {
   name: "App",
   data() {
     return {
-      trains,
+      trains_departs_tries,
+      trains_arrivees_tries,
     };
   },
 };
