@@ -30,6 +30,6 @@ Pour visualiser l'application fonctionnelle:
 5. Une fois la commande terminée, lancer la commande `npm run dev`
 6. Ouvrir un navigateur et demander le localhost au port 5173 : `http://localhost:5173/`
 
-## Application du VM EC2
+## Application fonctionne sur VM EC2
 
 Le lien pour voir l'application tourner sur une VM EC2 est le suivant : `http://ec2-98-88-24-254.compute-1.amazonaws.com/`
